@@ -355,7 +355,7 @@ include("auth.php");
 												<div class="container">
 												  <label><b>ID Guru</b></label>
 												  <br>
-												  <input type="hidden" placeholder="Masukkan ID guru" name="iduser" maxlength="12" value="<?PHP echo $iduser; ?>" required>
+												  <input type="hidden" placeholder="Masukkan ID guru" name="idT" maxlength="12" value="<?PHP echo $iduser; ?>" required>
 												  <input type="text" placeholder="Masukkan ID guru" name="idTeacher" maxlength="12" value="<?PHP echo $iduser; ?>" required>
 												  <br>
 
@@ -390,15 +390,14 @@ include("auth.php");
 												$idTeacher = $_POST['idTeacher'];
 												$nameTeacher = $_POST['nameTeacher'];
 												$pwd = $_POST['pwd'];
-												$iduser = $_POST['iduser'];
+												$idT = $_POST['idT'];
 
-												$sql = "UPDATE teacher SET iduser='$idTeacher', fullname='$nameTeacher', password='$pwd'  WHERE iduser = '$iduser'";
+												$sql = "UPDATE teacher SET iduser='$idTeacher', fullname='$nameTeacher', password='$pwd'  WHERE iduser = '$idT'";
 												if(mysqli_query($link, $sql)){
 													echo '<script type="text/javascript">
 																alert("Rekod berjaya dikemaskini");
 																window.location.href="teacherList.php";
 														 </script>';
-														//header("Location: teacherList.php");  window.location.href="teacherList.php";
 													} else{
 														echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 												}
