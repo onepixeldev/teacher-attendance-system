@@ -34,8 +34,10 @@
 			}
 			
 			else{
-				echo "<h3>Username/password is incorrect.</h3>
-					  <br/>Click here to <a href='login.php'>Login</a></div>";
+				echo '<script type="text/javascript">
+							alert("ID atau kata laluan salah!");
+							window.location.href="takeAttend.php";
+					 </script>';
 			}
     }
 ?>

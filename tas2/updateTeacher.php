@@ -33,25 +33,8 @@ include("auth.php");
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 	
     <style>
-	<!-- table num row -->
-		table {
-			counter-reset: rowNumber;
-		}
-
-		table tr {
-			counter-increment: rowNumber;
-		}
-
-		table tr td:first-child::before {
-			content: counter(rowNumber);
-			min-width: 1em;
-			margin-right: 0.5em;
-		}
-	</style>
-	
-	<style>
 		/* Full-width input fields */
-		input[type=text], input[type=password] {
+		input[type=text], input[type=password], input[type=email] {
 			width: 54%;
 			padding: 12px 20px;
 			margin: 8px 0;
@@ -105,7 +88,7 @@ include("auth.php");
 
 		/* The Modal (background) */
 		.modal {
-			display: block; /* Hidden by default */
+			display: none; /* Hidden by default */
 			position: fixed; /* Stay in place */
 			z-index: 1; /* Sit on top */
 			left: 80px;
@@ -170,22 +153,66 @@ include("auth.php");
 		}
 	</style>
 </head>
+<div id="id01" class="modal">
+<form class="modal-content animate" action="updateTeacher.php" method="POST">
+	
 
+	<div class="container">
+	  <label><b>ID</b></label>
+	  <br>
+	  <input type="text" placeholder="Nombor kad pengenalan" name="adminID" maxlength="12" value="<?PHP echo $fn['username']; ?>" required>
+	  <br>
+
+	  <label><b>Nama Penuh</b></label>
+	  <br>
+	  <input type="text" placeholder="Nama penuh" name="adminName" value="<?PHP echo $fn['fullname']; ?>"  required>
+	  <br>
+	  
+	  <label><b>Email</b></label>
+	  <br>
+	  <input type="email" placeholder="Email" name="adminEmail" value="<?PHP echo $fn['email']; ?>" required>
+	  <br>
+	  
+	  <label><b>Nombor Telefon</b></label>
+	  <br>
+	  <input type="text" placeholder="" name="adminEmail" value="<?PHP echo $fn['phone']; ?>" required>
+	  <br>
+	  
+	  <label><b>Kata Laluan</b></label>
+	  <br>
+	  <input type="password" placeholder="" name="pwd" value="">
+	  <br>
+	  
+	  <label><b>Ulang Kata Laluan</b></label>
+	  <br>
+	  <input type="password" placeholder="" name="pwd2" value="">
+	  <br>
+		
+	  <button type="submit">Kemaskini</button>
+	  <br>
+	  
+	</div>
+
+	<div  style="background-color:#f1f1f1">
+	  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="margin-left:15px;">Cancel</button>
+	  
+	</div>
+	</form>
+</div>
 <body class="skin-blue sidebar-mini">
-
     <!-- Site wrapper -->
     <div class="wrapper">
 
         <!-- HEADER SECTION -->
-        <header class="main-header">
+        <header class="main-header" >
             <!-- Logo -->
-            <a href="dashboard.php" class="logo">
+            <a href="dashboard.php" class="logo" style="background-color: #3CBCB5; color: #3CBCB5;">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini">
+            <span class="logo-mini">
                 <!--<img src="" width="50px"></img>-->            
             </span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg">                  
+            <span class="logo-lg">                  
 <!--                <img src="template/images/jata.png" width="50px"></img>
                 &nbsp;&nbsp;-->
                 <img src="images/logo/sriti_png_logo.png" width="50px" height="45px">
@@ -197,7 +224,7 @@ include("auth.php");
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
                 <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" style="background-color: #3CBCB5;"> 
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -211,22 +238,32 @@ include("auth.php");
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="" class="user-image" alt="">
-                                <span class="hidden-xs">user name</span>
+                                <img src="images/logo/adminLogo.png" class="user-image" alt="">
+                                <span class="hidden-xs"><?PHP echo $fn['fullname']; ?></span>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" >
                                 <!-- User image -->
-                                <li class="user-header">
-                                    <img src="./style-file/ImagePhoto" class="user-image" alt="">
-                                    <p>
-                                       name - info <small>info2</small>
-
+                                <li class="user-header" style="background-color: #3CBCB5; height: 102px;">
+                                    <img src="images/logo/adminLogo.png" class="user-image" alt="">
+                                    <p style="color: white;">
+                                       <?PHP echo $fn['fullname']; ?>
                                     </p>
                                 </li>
+								<li class="user-body">
+									<p>
+									   Email: <strong style="color: #3c763d;"><?PHP echo $fn['email']; ?></strong>
+									   <br>
+									   Nombor Telefon: <strong style="color: #3c763d;"><?PHP echo $fn['phone']; ?></strong>
+
+                                    </p>
+								<li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="logout.php" class="btn btn-default btn-flat">Log out</a>
+                                        <a href="logout.php" style="background-color: #ce1a1a; width:auto; font-size: 12px; font-weight: bold;" class="btn btn-warning btn-lg">Keluar</a>
+                                    </div>
+									<div class="pull-left">
+                                        <a onclick="document.getElementById('id01').style.display='block'" style="background-color: #00A65A; width:auto; font-size: 12px; font-weight: bold;" class="btn btn-warning btn-lg">Tukar Maklumat</a>
                                     </div>
                                 </li>
                             </ul>
@@ -366,12 +403,12 @@ include("auth.php");
 												  
 												  <label><b>Kata Laluan</b></label>
 												  <br>
-												  <input type="text" placeholder="Masukkan kata laluan" name="pwd" value="<?PHP echo $password; ?>" required>
+												  <input type="text" placeholder="Masukkan kata laluan" name="pwd" value="<?PHP echo $password; ?>" id="password" required>
 												  <br>
 												  
 												  <label><b>Ulang Kata Laluan</b></label>
 												  <br>
-												  <input type="password" placeholder="Ulang kata laluan" name="pwd2" value="" required>
+												  <input type="password" placeholder="Ulang kata laluan" name="pwd2" value="" id="confirm_password" required>
 												  <br>
 													
 												  <button type="submit">Kemaskini</button>
@@ -447,6 +484,22 @@ include("auth.php");
     <script src="./style-file/demo.js.download" type="text/javascript"></script>
 	
 	<!-- alert message -->
+	
+	<script>
+		var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
+
+		function validatePassword(){
+		  if(password.value != confirm_password.value) {
+			confirm_password.setCustomValidity("Passwords Don't Match");
+		  } else {
+			confirm_password.setCustomValidity('');
+		  }
+		}
+
+		password.onchange = validatePassword;
+		confirm_password.onkeyup = validatePassword;
+	</script>
+	
 	<script>
 	// Get the modal
 	var modal = document.getElementById('id01');
