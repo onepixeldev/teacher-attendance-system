@@ -153,52 +153,7 @@ include("auth.php");
 		}
 	</style>
 </head>
-<div id="id01" class="modal">
-<form class="modal-content animate" action="updateTeacher.php" method="POST">
-	
 
-	<div class="container">
-	  <label><b>ID</b></label>
-	  <br>
-	  <input type="text" placeholder="Nombor kad pengenalan" name="adminID" maxlength="12" value="<?PHP echo $fn['username']; ?>" required>
-	  <br>
-
-	  <label><b>Nama Penuh</b></label>
-	  <br>
-	  <input type="text" placeholder="Nama penuh" name="adminName" value="<?PHP echo $fn['fullname']; ?>"  required>
-	  <br>
-	  
-	  <label><b>Email</b></label>
-	  <br>
-	  <input type="email" placeholder="Email" name="adminEmail" value="<?PHP echo $fn['email']; ?>" required>
-	  <br>
-	  
-	  <label><b>Nombor Telefon</b></label>
-	  <br>
-	  <input type="text" placeholder="" name="adminEmail" value="<?PHP echo $fn['phone']; ?>" required>
-	  <br>
-	  
-	  <label><b>Kata Laluan</b></label>
-	  <br>
-	  <input type="password" placeholder="" name="pwd" value="">
-	  <br>
-	  
-	  <label><b>Ulang Kata Laluan</b></label>
-	  <br>
-	  <input type="password" placeholder="" name="pwd2" value="">
-	  <br>
-		
-	  <button type="submit">Kemaskini</button>
-	  <br>
-	  
-	</div>
-
-	<div  style="background-color:#f1f1f1">
-	  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="margin-left:15px;">Cancel</button>
-	  
-	</div>
-	</form>
-</div>
 <body class="skin-blue sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
@@ -243,7 +198,7 @@ include("auth.php");
                             </a>
                             <ul class="dropdown-menu" >
                                 <!-- User image -->
-                                <li class="user-header" style="background-color: #3CBCB5; height: 102px;">
+                                <li class="user-header" style="background-color: #3CBCB5; height: 151px;">
                                     <img src="images/logo/adminLogo.png" class="user-image" alt="">
                                     <p style="color: white;">
                                        <?PHP echo $fn['fullname']; ?>
@@ -260,10 +215,7 @@ include("auth.php");
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="logout.php" style="background-color: #ce1a1a; width:auto; font-size: 12px; font-weight: bold;" class="btn btn-warning btn-lg">Keluar</a>
-                                    </div>
-									<div class="pull-left">
-                                        <a onclick="document.getElementById('id01').style.display='block'" style="background-color: #00A65A; width:auto; font-size: 12px; font-weight: bold;" class="btn btn-warning btn-lg">Tukar Maklumat</a>
+                                        <a href="logout.php" style="background-color: #f44336; width:auto; font-size: 12px; font-weight: bold;" class="btn btn-warning btn-lg">Log keluar</a>
                                     </div>
                                 </li>
                             </ul>
@@ -500,17 +452,6 @@ include("auth.php");
 		confirm_password.onkeyup = validatePassword;
 	</script>
 	
-	<script>
-	// Get the modal
-	var modal = document.getElementById('id01');
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
-	</script>
 </body>
 
 </html>

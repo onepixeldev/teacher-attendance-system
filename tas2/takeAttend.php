@@ -29,7 +29,8 @@ include("auth.php");
 	<!-- fonr awesome -->
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
-    <style>
+	
+	<style>
 		/* Full-width input fields */
 		input[type=text], input[type=password], input[type=email] {
 			width: 54%;
@@ -39,163 +40,8 @@ include("auth.php");
 			border: 1px solid #ccc;
 			box-sizing: border-box;
 		}
-
-		/* Set a style for all buttons */
-		button {
-			background-color: #4CAF50;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			cursor: pointer;
-			width: 54%;
-		}
-
-		button:hover {
-			opacity: 0.8;
-		}
-
-		/* Extra styles for the cancel button */
-		.cancelbtn {
-			width: auto;
-			padding: 10px 18px;
-			background-color: #f44336;
-		}
-
-		/* Center the image and position the close button */
-		.imgcontainer {
-			text-align: center;
-			margin: 24px 0 12px 0;
-			position: relative;
-		}
-
-		img.avatar {
-			width: 40%;
-			border-radius: 50%;
-		}
-
-		.container {
-			padding: 16px;
-		}
-
-		span.psw {
-			float: right;
-			padding-top: 16px;
-		}
-
-		/* The Modal (background) */
-		.modal {
-			display: none; /* Hidden by default */
-			position: fixed; /* Stay in place */
-			z-index: 1; /* Sit on top */
-			left: 80px;
-			top: 0;
-			width: 100%; /* Full width */
-			height: 100%; /* Full height */
-			overflow: auto; /* Enable scroll if needed */
-			background-color: rgb(0,0,0); /* Fallback color */
-			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-			padding-top: 60px;
-		}
-
-		/* Modal Content/Box */
-		.modal-content {
-			background-color: #fefefe;
-			margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-			border: 1px solid #888;
-			width: 43%; /* Could be more or less, depending on screen size */
-		}
-
-		/* The Close Button (x) */
-		.close {
-			position: absolute;
-			right: 25px;
-			top: 0;
-			color: #000;
-			font-size: 35px;
-			font-weight: bold;
-		}
-
-		.close:hover,
-		.close:focus {
-			color: red;
-			cursor: pointer;
-		}
-
-		/* Add Zoom Animation */
-		.animate {
-			-webkit-animation: animatezoom 0.6s;
-			animation: animatezoom 0.6s
-		}
-
-		@-webkit-keyframes animatezoom {
-			from {-webkit-transform: scale(0)} 
-			to {-webkit-transform: scale(1)}
-		}
-			
-		@keyframes animatezoom {
-			from {transform: scale(0)} 
-			to {transform: scale(1)}
-		}
-
-		/* Change styles for span and cancel button on extra small screens */
-		@media screen and (max-width: 300px) {
-			span.psw {
-			   display: block;
-			   float: none;
-			}
-			.cancelbtn {
-			   width: 100%;
-			}
-		}
 	</style>
 </head>
-<div id="id01" class="modal">
-<form class="modal-content animate" action="updateTeacher.php" method="POST">
-	
-
-	<div class="container">
-	  <label><b>ID</b></label>
-	  <br>
-	  <input type="text" placeholder="Nombor kad pengenalan" name="adminID" maxlength="12" value="<?PHP echo $fn['username']; ?>" required>
-	  <br>
-
-	  <label><b>Nama Penuh</b></label>
-	  <br>
-	  <input type="text" placeholder="Nama penuh" name="adminName" value="<?PHP echo $fn['fullname']; ?>"  required>
-	  <br>
-	  
-	  <label><b>Email</b></label>
-	  <br>
-	  <input type="email" placeholder="Email" name="adminEmail" value="<?PHP echo $fn['email']; ?>" required>
-	  <br>
-	  
-	  <label><b>Nombor Telefon</b></label>
-	  <br>
-	  <input type="text" placeholder="" name="adminEmail" value="<?PHP echo $fn['phone']; ?>" required>
-	  <br>
-	  
-	  <label><b>Kata Laluan</b></label>
-	  <br>
-	  <input type="password" placeholder="" name="pwd" value="">
-	  <br>
-	  
-	  <label><b>Ulang Kata Laluan</b></label>
-	  <br>
-	  <input type="password" placeholder="" name="pwd2" value="">
-	  <br>
-		
-	  <button type="submit">Kemaskini</button>
-	  <br>
-	  
-	</div>
-
-	<div  style="background-color:#f1f1f1">
-	  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="margin-left:15px;">Cancel</button>
-	  
-	</div>
-	</form>
-</div>
 <body class="skin-blue sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
@@ -203,7 +49,7 @@ include("auth.php");
         <!-- HEADER SECTION -->
         <header class="main-header" >
             <!-- Logo -->
-            <a href="dashboard.php" class="logo" style="background-color: #3CBCB5; color: #3CBCB5;">
+            <a href="" class="logo" style="background-color: #3CBCB5; color: #3CBCB5;">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">
                 <!--<img src="" width="50px"></img>-->            
@@ -238,9 +84,9 @@ include("auth.php");
                                 <img src="images/logo/adminLogo.png" class="user-image" alt="">
                                 <span class="hidden-xs"><?PHP echo $fn['fullname']; ?></span>
                             </a>
-                            <ul class="dropdown-menu" >
+                           <ul class="dropdown-menu" >
                                 <!-- User image -->
-                                <li class="user-header" style="background-color: #3CBCB5; height: 102px;">
+                                <li class="user-header" style="background-color: #3CBCB5; height: 151px;">
                                     <img src="images/logo/adminLogo.png" class="user-image" alt="">
                                     <p style="color: white;">
                                        <?PHP echo $fn['fullname']; ?>
@@ -257,10 +103,7 @@ include("auth.php");
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="logout.php" style="background-color: #ce1a1a; width:auto; font-size: 12px; font-weight: bold;" class="btn btn-warning btn-lg">Keluar</a>
-                                    </div>
-									<div class="pull-left">
-                                        <a onclick="document.getElementById('id01').style.display='block'" style="background-color: #00A65A; width:auto; font-size: 12px; font-weight: bold;" class="btn btn-warning btn-lg">Tukar Maklumat</a>
+                                        <a onclick="passLO()" style="background-color: #f44336; width:auto; font-size: 12px; font-weight: bold;" class="btn btn-warning btn-lg">Log keluar</a>
                                     </div>
                                 </li>
                             </ul>
@@ -295,7 +138,7 @@ include("auth.php");
                     <li class="header">MENU UTAMA</li>
 
                     <li class="treeview">
-                        <a href="dashboard.php">
+                        <a href="" onClick="passD()">
                             <i class="fa fa-dashboard"></i>  <span>Paparan utama</span>
                         </a>
                     </li>
@@ -332,18 +175,18 @@ include("auth.php");
                         </a>
                         <ul class="treeview-menu" style="display: none;">
                             <li class="">
-                                <a href="teacherList.php">
+                                <a href="" onClick="passWord()">
                                     <i class="fa fa-long-arrow-right"></i>Senarai Guru</a>
                             </li>
                             <li class="">
-                                <a href="addUser.php">
+                                <a href="" onClick="passAU()">
                                     <i class="fa fa-long-arrow-right"></i>Tambah Guru</a>
                             </li>
 
                         </ul>
                     </li>
 					<li class="treeview">
-                        <a href="report.php">
+                        <a href="" onClick="passR()">
                             <i class="fa fa-dashboard"></i>  <span>Laporan Kehadiran</span>
                         </a>
                     </li>
@@ -366,6 +209,7 @@ include("auth.php");
 				<strong id="date1"></strong>
 				<br>
 				<strong id="time1"></strong>
+				
             </section>
 
             <!-- Main content -->
@@ -466,18 +310,91 @@ include("auth.php");
 		var dt = new Date();
 		document.getElementById("time1").innerHTML = dt.toLocaleTimeString();
 	</script>
-
-	<script>
-	// Get the modal
-	var modal = document.getElementById('id01');
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
-	</script>
+	
+	<SCRIPT>
+	//dashboard auth
+		function passD() {
+		var pass1 = prompt('Sila masukkan kata laluan');
+			
+			if (pass1 !== "<?PHP echo $fn['password'];?>")
+			{
+				alert('Sila masukkan kata laluan yang betul');
+				
+			}
+			if (pass1 == "<?PHP echo $fn['password'];?>")
+			{
+				window.open('dashboard.php');
+			}
+		} 
+	</SCRIPT>
+	
+	<SCRIPT>
+	//teacher list auth
+		function passWord() {
+		var pass1 = prompt('Sila masukkan kata laluan');
+			
+			if (pass1 !== "<?PHP echo $fn['password'];?>")
+			{
+				alert('Sila masukkan kata laluan yang betul');
+				
+			}
+			if (pass1 == "<?PHP echo $fn['password'];?>")
+			{
+				window.open('teacherList.php');
+			}
+		} 
+	</SCRIPT>
+	
+	<SCRIPT>
+	//add teacher auth
+		function passAU() {
+		var pass1 = prompt('Sila masukkan kata laluan');
+			
+			if (pass1 !== "<?PHP echo $fn['password'];?>")
+			{
+				alert('Sila masukkan kata laluan yang betul');
+				
+			}
+			if (pass1 == "<?PHP echo $fn['password'];?>")
+			{
+				window.open('addUser.php');
+			}
+		} 
+	</SCRIPT>
+	
+	<SCRIPT>
+	//report auth
+		function passR() {
+			var pass1 = prompt('Sila masukkan kata laluan');
+			
+			if (pass1 !== "<?PHP echo $fn['password'];?>")
+			{
+				alert('Sila masukkan kata laluan yang betul');
+				
+			}
+			if (pass1 == "<?PHP echo $fn['password'];?>")
+			{
+				window.open('report.php');
+			}
+		} 
+	</SCRIPT>
+	
+	<SCRIPT>
+	//logout auth
+		function passLO() {
+		var pass1 = prompt('Sila masukkan kata laluan');
+			
+			if (pass1 !== "<?PHP echo $fn['password'];?>")
+			{
+				alert('Sila masukkan kata laluan yang betul');
+				
+			}
+			if (pass1 == "<?PHP echo $fn['password'];?>")
+			{
+				window.location.assign("logout.php")
+			}
+		} 
+	</SCRIPT>
 
 
 

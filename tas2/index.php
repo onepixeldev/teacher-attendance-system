@@ -63,5 +63,12 @@
 			<td align="center" colspan="3">                         
 			<input type="submit" style="background:" value=" E N T E R " name="submit"> 
 			<input type="reset" style="background:" value=" R E S E T " name="reset">
+			<br>
+			<p>
+			E-mel bantuan Sistem Kehadiran Guru : xenotime94@gmail.com
+			<br>
+			<br>
+			IT Servis : 011-3329 5442
+			</p>
 		</center></form></body></html>
 <?php } ?>

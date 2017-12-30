@@ -152,7 +152,7 @@ include("auth.php");
 	</style>
 </head>
 <div id="id01" class="modal">
-<form class="modal-content animate" action="updateTeacher.php" method="POST">
+<form class="modal-content animate" action="updateAdmin.php" method="POST">
 	
 
 	<div class="container">
@@ -173,17 +173,17 @@ include("auth.php");
 	  
 	  <label><b>Nombor Telefon</b></label>
 	  <br>
-	  <input type="text" placeholder="" name="adminEmail" value="<?PHP echo $fn['phone']; ?>" required>
+	  <input type="text" placeholder="" name="adminTel" value="<?PHP echo $fn['phone']; ?>" required>
 	  <br>
 	  
 	  <label><b>Kata Laluan</b></label>
 	  <br>
-	  <input type="password" placeholder="" name="pwd" value="">
+	  <input type="text" placeholder="" name="adminPwd" value="<?PHP echo $fn['password']; ?>">
 	  <br>
 	  
 	  <label><b>Ulang Kata Laluan</b></label>
 	  <br>
-	  <input type="password" placeholder="" name="pwd2" value="">
+	  <input type="text" placeholder="" name="adminPwd2" value="<?PHP echo $fn['password']; ?>">
 	  <br>
 		
 	  <button type="submit">Kemaskini</button>
@@ -192,7 +192,7 @@ include("auth.php");
 	</div>
 
 	<div  style="background-color:#f1f1f1">
-	  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="margin-left:15px;">Cancel</button>
+	  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="margin-left:15px;">Batalkan</button>
 	  
 	</div>
 	</form>
@@ -241,7 +241,7 @@ include("auth.php");
                             </a>
                             <ul class="dropdown-menu" >
                                 <!-- User image -->
-                                <li class="user-header" style="background-color: #3CBCB5; height: 102px;">
+                                <li class="user-header" style="background-color: #3CBCB5; height: 151px;">
                                     <img src="images/logo/adminLogo.png" class="user-image" alt="">
                                     <p style="color: white;">
                                        <?PHP echo $fn['fullname']; ?>
@@ -378,6 +378,7 @@ include("auth.php");
 										<table class="table table-bordered table-hover">
 											<div class="alert alert-success alert-dismissable">                            
 												<h4>SELAMAT DATANG <?PHP echo $fn['fullname']; ?></h4>
+												<p>Nota : Maklumat pentadbir hanya boleh dikemaskini pada <strong style="color: #a0192b;"> Paparan Utama</strong> sahaja.</p>
 												<p>Pastikan perkara dibawah dilakukan :</p>
 												<p><i class="icon fa fa-check"></i>Pastikan panel kehadiran dibuka untuk pengambilan kehadiran masuk dan keluar.</p>
 												<p><i class="icon fa fa-check"></i>Semak senarai guru yang terkini dan tambah guru baru daftar.</p>
@@ -436,7 +437,7 @@ include("auth.php");
 		}
 	}
 	</script>
-
+	
 
 
 
