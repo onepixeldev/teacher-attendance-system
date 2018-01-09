@@ -147,27 +147,6 @@ include("auth.php");
                             <i class="fa fa-dashboard"></i>  <span>Kehadiran</span>
                         </a>
                     </li>
-					<li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-user"></i>  <span>Kelas Ganti</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu" style="display: none;">
-                            <li class="">
-                                <a href="listReliefClass.php">
-                                    <i class="fa fa-long-arrow-right"></i>Senarai Kelas Ganti</a>
-                            </li>
-                            <li class="">
-                                <a href="addReliefClass.php">
-                                    <i class="fa fa-long-arrow-right"></i>Tambah Kelas Ganti</a>
-                            </li>
-							<li class="">
-                                <a href="timeTableView.php">
-                                    <i class="fa fa-long-arrow-right"></i>Semak Jadual Kelas</a>
-                            </li>
-
-                        </ul>
-                    </li>
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-user"></i>  <span>Pengurusan</span>
