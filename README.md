@@ -6,4 +6,4 @@ username: admin
 password: 1234
 
 # teacher-attendance-system
-Teacher attendance system for Sekolah Rendah Integrasi Tahfiz Ilmuwan
+Teacher attendance system for Sekolah Rendah Integrasi Tahfiz Ibnu Sina
