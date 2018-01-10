@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<?php
+<?PHP 
+		session_start(); 
 		require('config.php');
-		session_start();
-		
+
 		// If form submitted, insert values into the database.
 		if (isset($_POST['username'])){
 			
@@ -14,7 +13,7 @@
 			$password = mysqli_real_escape_string($link, $password);
 			//Checking is user existing in the database or not
 			$fullname = stripslashes($_REQUEST['$fullname']);
-			$fullname = mysqli_real_escape_string($_REQUEST['$fullname']);
+			$fullname = mysqli_real_escape_string($link, $_REQUEST['$fullname']);
 			
 			$query = "SELECT * FROM admin WHERE username='$username'and password='$password'";
 			
